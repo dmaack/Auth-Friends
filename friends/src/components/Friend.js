@@ -4,11 +4,24 @@ import { connect } from 'react-redux';
 const Friend = props => {
     console.log('these are the props passed from Friend', props)
 
-    return (
-        <div>
+    if(!props) return <h2>Loadings Smurfs</h2>
 
+
+    return (
+        <div className='friend-container'>
+            <p>{props.name}</p>
+            <p>{props.age} yrs</p>
+            <p>{props.email}</p>
         </div>
     )
 }
 
-export default connect()(Friend);
+const mapsStateToProps = state => {
+    return {
+        friendData: state.friendData,
+        isFetching: state.isFetching,
+        error: state.error
+    }
+}
+
+export default connect(mapsStateToProps, {})(Friend);
