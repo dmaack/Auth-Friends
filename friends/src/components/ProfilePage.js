@@ -7,12 +7,10 @@ import { addFriend } from '../actions';
 const ProfilePage = props => {
     console.log('Profile Props', props)
 
-    // useEffect(() => {
-    //     props.addFriend();
-    // }, [])
+
 
     return(
-        <div>
+        <div className='profile-header'>
             <h1>Hello User!</h1>
             <FriendForm />
             <FriendList friends={props}/>

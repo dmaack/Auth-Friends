@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 const Friend = props => {
     console.log('Friend props', props)
 
-    if(!props) return <h2>Loadings Smurfs</h2>
+    if(!props) return <h2>Loadings Friends</h2>
 
 
     return (
         <div className='friend-container'>
-            <p>{props.name}</p>
+            <p><strong>{props.name}</strong></p>
             <p>{props.age} yrs</p>
             <p>{props.email}</p>
         </div>

@@ -1,0 +1,157 @@
+.App {
+  // text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  header{
+    background-color: #1976f2;
+    height: 10vh;
+    img{
+      height: 50px;
+      margin: 28px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .links{
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      ul{
+        li{
+          display: inline-flex;
+          list-style-type: none;
+          margin: 20px;
+          a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            &:hover{
+              background-color: white;
+              color: #1976f2;
+              // padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.welcome-page-container{
+  width: 100%;
+  height: 40vh;
+  padding-top: 5%;
+  background-color: #eef0f6;
+  margin: 0 auto 4% auto;
+  display: flex;
+  justify-content: space-evenly;
+  .welcome-page-content{
+    font-size: 1.5rem;
+    h2{
+      font-size: 3.4rem;
+      color: #1976f2;
+    }
+  }
+  button{
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #1976f2;
+    border: 1px solid #1976f2;
+    border-radius: 5px;
+    padding: 15%;
+    margin: 180% auto 0 auto;
+    &:hover{
+      background-color: white;
+      color: #1976f2;
+      cursor: pointer;
+    }
+  }
+}
+
+form{
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  input{
+    margin: 15px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: 80px;
+    font-weight: bold;
+    &:hover{
+      cursor: pointer;
+      background-color: #1976f2;
+        color: white;
+    }
+  }
+}
+
+.profile-header{
+  width: 90%;
+  margin: 10% auto 10% auto;
+  border: 1px solid lightgray;
+  background-color: #eef0f6;
+  h1{
+    border-bottom: 1px solid lightgray;
+    padding: 2% 0 3% 3%;
+  }
+  form {
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.2rem;
+    input{
+      margin: 10px;
+      height: 30px;
+      width: 150px;
+      border-radius: 5px;
+    }
+    button{
+      height: 30px;
+      width: 60px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      &:hover{
+        background-color: #1976f2;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .friend-list-container{
+    h2{
+      margin-left: 9%;
+    }
+    .friend-list{
+      // width: 90%;
+      margin: 1% 2%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      // border: 1px solid lightgrey
+    }
+  }
+}
+
+.friend-container{
+  width: 200px;
+  height: 150px;
+  border: 1px solid lightgrey;
+  padding: 2%;
+  margin: 2%;
+  font-size: 1.1rem;
+}
