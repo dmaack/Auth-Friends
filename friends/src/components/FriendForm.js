@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { fetchFriends, addFriend } from '../actions';
 
 const FriendForm = props => {
-    console.log('these are the props from Friend Form', props)
+    console.log('FriendForm props', props)
 
     const [friend, setFriend] = useState({});
     console.log('this is my friend form state', friend)
 
     useEffect(() => {
         props.fetchFriends();
-    }, [props])
+    }, [])
 
     if (props.isFetching) {
         console.log('this is my loading props',props.isFetching)
@@ -61,8 +61,9 @@ const FriendForm = props => {
                     onChange={handleChange}
                     value={friend.email}
                 />
+                <button className='add-friend-button' type='submit'>Add</button>
             </form>
-            <button className='add-friend-button' type='submit'>Add</button>
+            
         </div>
     )
 }

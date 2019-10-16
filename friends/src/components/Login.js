@@ -6,13 +6,16 @@ import { Redirect } from 'react-router-dom';
 import { addLogin } from '../actions';
 
 const Login = (props) => {
-    console.log('these are the Login props', props)
+    console.log('Login props', props)
     const [login, setLogin] = useState({});
+    console.log('login state', login)
 
     const loginSubmit = e => {
+        console.log('Login e', e)
         e.preventDefault()
-        if (login.name.trim() && login.age.trim() && login.email.trim()) {
+        if (login.username.trim() && login.password.trim()) {
             props.addLogin(login)
+            setTimeout(props.history.push('/profilePage'), 1000)
             setLogin('');
         }
     }
@@ -43,6 +46,7 @@ const Login = (props) => {
                         onChange={handleChange}
                         value={login.password}
                     />
+                    <button type='submit'>Login</button>
                     </>
                 )}
             </form>

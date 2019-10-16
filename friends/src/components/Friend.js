@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Friend = props => {
-    console.log('these are the props passed from Friend', props)
+    console.log('Friend props', props)
 
     if(!props) return <h2>Loadings Smurfs</h2>
 

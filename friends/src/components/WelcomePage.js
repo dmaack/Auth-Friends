@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 
 const WelcomePage = props => {
-    console.log('these are the props from Welcome Page', props)
+    console.log('Welcome Page props', props)
 
     return (
         <div>
@@ -12,7 +12,7 @@ const WelcomePage = props => {
             <p><strong>Edit</strong> your friends information</p>
             <p><strong>Remove</strong> your old friends</p>
 
-            <Link to='/login'>Login</Link>
+            <Link to='/login'>Get Started</Link>
         </div>
     )
 }

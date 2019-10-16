@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Friend from './Friend';
 
 const FriendList = props => {
-    console.log('these are the props passed down from Friend List', props);
+    console.log('Friend List props', props);
     return (
         <div>
             <h2>Your Friend List</h2>
@@ -22,7 +22,7 @@ const FriendList = props => {
 
 const mapsStateToProps = state => {
     return {
-        friendDate: state.friendData,
+        friendData: state.friendData,
         isFetching: state.isFetching,
         error: state.error
     }

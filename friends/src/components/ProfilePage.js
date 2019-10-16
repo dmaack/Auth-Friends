@@ -5,11 +5,11 @@ import FriendForm from './FriendForm';
 import { addFriend } from '../actions';
 
 const ProfilePage = props => {
-    console.log('these are the props from Profile', props)
+    console.log('Profile Props', props)
 
-    useEffect(() => {
-        props.addFriend();
-    }, [props])
+    // useEffect(() => {
+    //     props.addFriend();
+    // }, [])
 
     return(
         <div>

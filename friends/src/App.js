@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, } from 'react-router-dom';
+import { Route, Link, withRouter} from 'react-router-dom';
 
 import './App.css';
 
@@ -11,6 +11,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 
 function App(props) {
+  console.log('App props', props)
   return (
     <div className="App">
       <header>
@@ -37,4 +38,4 @@ function App(props) {
   )
 }
 
-export default App;
+export default withRouter(App);

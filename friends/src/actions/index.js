@@ -13,7 +13,7 @@ export const fetchFriends = () => dispatch => {
     .get('/api/friends')
     .then(res => {
         console.log('this is the data from api request', res)
-        dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: res})
+        dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: res.data})
     })
     .catch(err => {
         console.log('could not fetch data', err)
@@ -21,21 +21,21 @@ export const fetchFriends = () => dispatch => {
     })
 }
 
-export const addFriend = ({name, age, email}) => dispatch => {
-    console.log('this is the friend info im adding', name, age, email)
+export const addFriend = (friend) => dispatch => {
+    console.log('this is the friend info im adding', friend)
     axiousWithAuth()
     .post('/api/friends', {
-        name: name,
-        age: age,
-        email: email
+        name: friend.name,
+        age: friend.age,
+        email: friend.email
     })
     .then(res => {
         console.log('this is the response from axios post request', res)
-        dispatch({ type: 'ADD_FRIEND_SUCCESS', payload: res.data})
+        dispatch({ type: 'ADD_FRIENDS_SUCCESS', payload: res.data})
     })
     .catch(err => {
         console.log(' friend data not posted', err)
-        dispatch({ type: 'ADD_FRIEND_FAILURE', payload: err})
+        dispatch({ type: 'ADD_FRIENDS_FAILURE', payload: err})
     })
 }
 
@@ -49,7 +49,7 @@ export const addLogin = ({ username, password}) => dispatch => {
     .then(res => {
         console.log('this is the data from login post', res)
         localStorage.setItem('token', res.data.payload)
-        // setTimeout(props.history.push('/profilePage'), 1000)
+        
     })
     .catch(err => {
         console.log('login data not posted', err)
