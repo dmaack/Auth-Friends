@@ -30,6 +30,7 @@ const Login = (props) => {
                 <Redirect to='/profilePage' />
                 : (
                     <>
+                    <label>Username</label>
                     <input 
                         className='login-input'
                         type='text'
@@ -38,6 +39,7 @@ const Login = (props) => {
                         onChange={handleChange}
                         value={login.username}
                     />
+                    <label>Password</label>
                     <input 
                         className='login-input'
                         type='password'
