@@ -25,7 +25,7 @@ const Login = (props) => {
     }
     return (
         <div className='login-form'>
-            <form onSubmit={loginSubmit}>
+            <form className='login-form' onSubmit={loginSubmit}>
                 {localStorage.getItem('token') ? 
                 <Redirect to='/profilePage' />
                 : (
