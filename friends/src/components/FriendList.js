@@ -8,13 +8,13 @@ const FriendList = props => {
         <div>
             <h2>Your Friend List</h2>
             <div className='friend-list-container'>
-                {props.friendData.map(friend => {
+                {props.friendData.map(friend => (
                     <Friend 
                     name={friend.name}
                     age={friend.age}
                     email={friend.email}
                     />
-                })}
+                ))}
             </div>
         </div>
     )

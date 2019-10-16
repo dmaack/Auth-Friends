@@ -10,7 +10,7 @@ const FriendForm = props => {
 
     useEffect(() => {
         props.fetchFriends();
-    }, [])
+    }, [props])
 
     if (props.isFetching) {
         console.log('this is my loading props',props.isFetching)

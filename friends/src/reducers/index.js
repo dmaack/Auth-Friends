@@ -6,11 +6,13 @@ import {
     ADD_FRIENDS_FAILURE
 } from '../actions';
 
+
 const initialState = {
     friendData: [],
     isLoading: false,
     error: ''
 }
+
 
 export const reducer = ( state = initialState, action ) => {
     switch(action.type) {
